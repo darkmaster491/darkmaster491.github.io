@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html ng-app="myPortfolioWebsiteApp" ng-controller="myPortfolioWebsiteCtrl" ng-init="bgColor='black'">
+  <head>
+    <title>darkmaster491's website</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/RikkuX491/RikkuX491.github.io/master/BlackHat.PNG">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
+    <style>
+      body{
+        color: white;
+      }
+	    nav{
+        margin: 0px;
+        height: 1vw;
+        position: fixed;
+        top: 0;
+        width: 92%;
+      }
+	    .navBarItem{
+        text-decoration: none;
+        color: white;
+      }
+	    .navBarItem:hover{
+        color: red;
+	    }
+	    .nav_ul{
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+	    }
+	    .nav_li{
+        float: left;
+        margin: 0px;
+        padding: 0vw 0vw 0vw 3.6vw;
+        font-size: 1.7vw;
+	    }
+	    .sectionTitle{
+        font-size: 2.4vw;
+        margin: 0px;
+        padding: 0px;
+	    }
+	    .sectionTitle2{
+        font-size: 1.8vw;
+        margin: 0px;
+        padding: 0px;
+        color: grey;
+	    }
+	    .sectionContainerA{
+        margin-top: 50px;
+        padding: 0px;
+        height: 20vw;
+        width: 53vw;
+	    }
+	    .sectionContainerB{
+        margin: 0px;
+        padding: 0px;
+        height: 2vw;
+        width: 32vw;
+	    }
+	    .navChains{
+        padding: 0px;
+        border: 50px solid transparent;
+        -webkit-border-image: url(https://raw.githubusercontent.com/RikkuX491/RikkuX491.github.io/master/Chains.PNG) 100 round; /* Safari 3.1-5 */
+        -o-border-image: url(https://raw.githubusercontent.com/RikkuX491/RikkuX491.github.io/master/Chains.PNG) 100 round; /* Opera 11-12.1 */
+        border-image: url(https://raw.githubusercontent.com/RikkuX491/RikkuX491.github.io/master/Chains.PNG) 100 round;
+	    }
+	    .chains{
+        padding: 0px;
+        border: 100px solid transparent;
+        -webkit-border-image: url(https://raw.githubusercontent.com/RikkuX491/RikkuX491.github.io/master/Chains.PNG) 100 round; /* Safari 3.1-5 */
+        -o-border-image: url(https://raw.githubusercontent.com/RikkuX491/RikkuX491.github.io/master/Chains.PNG) 100 round; /* Opera 11-12.1 */
+        border-image: url(https://raw.githubusercontent.com/RikkuX491/RikkuX491.github.io/master/Chains.PNG) 100 round;
+	    }
+      .gameTitle{
+        text-align: center;
+        color: white;
+      }
+      .gameTitle:hover{
+        color: red;
+      }
+	    footer{
+        padding-left: 1%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: left;
+	    }
+	  </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+  </head>
+  <body style="background-color:{{bgColor}}">
+    <nav class="navChains" style="background-color:{{bgColor}}; font-family: 'Press Start 2P', cursive">
+	    <ul class="nav_ul">
+        <li class="nav_li"><a href="#" class="navBarItem">Home</a></li>
+		    <li class="nav_li"><a href="#AboutMe" class="navBarItem">About Me</a></li>
+		    <li class="nav_li"><a href="#Skills" class="navBarItem">Skills</a></li>
+		    <li class="nav_li"><a href="#Projects" class="navBarItem">Projects</a></li>
+        <li class="nav_li"><a href="#Games" class="navBarItem">Games</a></li>
+		    <li class="nav_li"><a href="#Contact" class="navBarItem">Contact</a></li>
+	    </ul>
+    </nav>
+    <br><br><br><br>
+	<center>
+      <div class="chains sectionContainerA" style="font-family: 'Press Start 2P', cursive">
+        <h1 class="sectionTitle">Hello World!<br>My name is Ricardo Guerra, also known as darkmaster491 online.<br>I'm a competitive Pokémon VGC player who has been attending locals and regionals since 2006.</h1>
+	  </div>
+    </center>	  
+
+    <footer style="background-color:black">
+      <p>Pick a color to change the background color: <select ng-model="bgColor" ng-options="x for x in colors"></select></p>
+    </footer>
+    <script>
+      var myPortfolioWebsiteApp = angular.module('myPortfolioWebsiteApp', []);
+      myPortfolioWebsiteApp.controller('myPortfolioWebsiteCtrl', function($scope){
+        $scope.colors = ["black", "blue", "green", "red"];
+      });
+    </script>
+  </body>
+</html>
